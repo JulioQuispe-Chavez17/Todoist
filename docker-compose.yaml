@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+    mongo:
+      image: mongo:4.4.8
+      container_name: mongo
+      expose:
+        - 27017
+      ports:
+        - "27017:27017"
+      restart: always
+      volumes:
+      - todoist-data:/data/db
+volumes:
+  todoist-data:
