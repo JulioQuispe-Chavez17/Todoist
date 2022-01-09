@@ -14,7 +14,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "mjvnirssyqefug",
     "password": "35b71bcef27ae66eda7b2b04848e56cdef3611ada1cd74c7719920251b640c7b",
     "database": "mjvnirssyqefug",
     "port": 5432,
