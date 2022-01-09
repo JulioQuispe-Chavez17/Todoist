@@ -1,6 +1,6 @@
-import React from "react";
-import TextAreaAutoSize from "react-textarea-autosize";
-import "./text-field.css";
+import React from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
+import './text-field.css';
 
 export default function TextField({
   name,
@@ -10,18 +10,18 @@ export default function TextField({
   className,
   deleteList,
   handleCancel,
-  onEnter
+  onEnter,
 }) {
   return (
-    <div className="list-title-edit">
-      <TextAreaAutoSize
+    <div className='list-title-edit'>
+      <TextareaAutosize
         autoFocus
         className={className}
         name={name}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
-        style={{ width: deleteList ? 220 : 354 }}
+        style={{ width: deleteList ? 220 : 1000 }}
         onKeyDown={onEnter}
       />
       {deleteList && (

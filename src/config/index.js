@@ -1,5 +1,5 @@
 const config = {
-  api_host: "http://localhost:3000",
+  api_host: "https://be-todolist.herokuapp.com",
 };
 
 export { config };

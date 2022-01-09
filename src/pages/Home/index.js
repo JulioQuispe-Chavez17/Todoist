@@ -14,6 +14,12 @@ export default function HomePage() {
   const getTodosAPI = async () => {
     try {
       const response = await getTodos();
+      response.data.data.forEach(res => {
+        res.status = false;
+        res.Items.forEach((item => {
+          item.isEdit = false
+        }))
+      })
       setTodos(response.data.data);
     } catch (err) {
       console.log(err);
@@ -26,18 +32,21 @@ export default function HomePage() {
 
   return (
     <>
-      <Header>MERN Clone Trello</Header>
+      <Header>TODOLIST</Header>
       <Board>
-        <Card todos={todos} getTodosAPI={() => getTodosAPI()}/>
-        <div className="add-list">
+        <Card todos={todos} getTodosAPI={() => getTodosAPI()} />
+        <div className='add-list'>
           {isToggleList ? (
-            <AddList handleCancel={() => setIsToggleList(false)} getTodosAPI={() => getTodosAPI()}/>
+            <AddList
+              handleCancel={() => setIsToggleList(false)}
+              getTodosAPI={() => getTodosAPI()}
+            />
           ) : (
             <div
-              className="add-list-button"
+              className='add-list-button'
               onClick={() => setIsToggleList(true)}
             >
-              <ion-icon name="add-outline" /> Add a list
+              <ion-icon name='add-outline'></ion-icon> Add a list
             </div>
           )}
         </div>

@@ -1,4 +1,5 @@
 todoist videos: 2:55
+sequalize 1:03:25
 
 # Getting Started with Create React App
 
