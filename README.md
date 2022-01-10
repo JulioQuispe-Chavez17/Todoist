@@ -1,6 +1,3 @@
-todoist videos: 2:55
-sequalize 1:03:25
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
